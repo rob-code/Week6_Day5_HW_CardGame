@@ -1,13 +1,13 @@
 import java.util.*;
 
-public class Deck{
+public class TraditionalDeck implements Pack{
 
   private Card card;
   private ArrayList<String>suits;
   private ArrayList<String>values;
   private ArrayList<Card> deck;
 
-  public Deck(){
+  public TraditionalDeck(){
     this.suits = new ArrayList<String>();
     this.values = new ArrayList<String>();
     this.deck = new ArrayList<Card>();

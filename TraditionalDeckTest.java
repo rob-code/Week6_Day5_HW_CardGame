@@ -1,7 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 
-public class DeckTest{
+public class TraditionalDeckTest{
 
   Card card;
   Deck deck;
