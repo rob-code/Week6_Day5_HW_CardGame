@@ -1,0 +1,2 @@
+Good to make an interface Decks and make the decks comply with this. That way we can add as many decks as we like.
+

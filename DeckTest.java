@@ -11,11 +11,26 @@ public class DeckTest{
     deck = new Deck();
   }
 
-
   @Test
   public void canGetNumberOfCardsInDeck(){
-    assertEquals(36, deck.numberOfCards());
+    assertEquals(52, deck.numberOfCards());
   }
+
+  @Test
+  public void canShuffleTheDeck(){
+    deck.shuffle();
+  }
+
+  @Test
+  public void getTopCardFromDeck(){
+   Card card = deck.getCard();
+   System.out.println(card.getValue() + " " + card.getSuit());    
+  }
+
+
+
+
+
 
 }
 
