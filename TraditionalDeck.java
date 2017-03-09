@@ -5,7 +5,7 @@ public class TraditionalDeck implements Pack{
   private Card card;
   private ArrayList<String>suits;
   private ArrayList<String>values;
-  private ArrayList<Card> deck;
+  private ArrayList<Card>deck;
 
   public TraditionalDeck(){
     this.suits = new ArrayList<String>();
@@ -56,11 +56,11 @@ public class TraditionalDeck implements Pack{
   // }
   }
 
-public Card getCard(){
-      Card c = deck.get(deck.size()-1);
-      deck.remove(deck.size()-1);
-      return c;
-}
+  public Card getCard(){
+    Card c = deck.get(deck.size()-1);
+    deck.remove(deck.size()-1);
+    return c;
+  }
 
 
 }

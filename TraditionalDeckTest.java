@@ -4,11 +4,11 @@ import org.junit.*;
 public class TraditionalDeckTest{
 
   Card card;
-  Deck deck;
+  TraditionalDeck deck;
 
   @Before
   public void before(){
-    deck = new Deck();
+    deck = new TraditionalDeck();
   }
 
   @Test
