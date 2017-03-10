@@ -1,14 +1,15 @@
 import static org.junit.Assert.*;
 import org.junit.*;
+import card_game.*;
 
-public class TraditionalDeckTest{
+public class DeckTest{
 
   Card card;
-  TraditionalDeck deck;
+  Deck deck;
 
   @Before
   public void before(){
-    deck = new TraditionalDeck();
+    deck = new Deck();
   }
 
   @Test
@@ -17,15 +18,18 @@ public class TraditionalDeckTest{
   }
 
   @Test
+  public void getTopCardFromDeck(){
+   Card card = deck.getCard();
+   System.out.println(card.getNumberValue());
+   System.out.println(card.getValue() + " " + card.getSuit());    
+  }
+
+  @Test
   public void canShuffleTheDeck(){
     deck.shuffle();
   }
 
-  @Test
-  public void getTopCardFromDeck(){
-   Card card = deck.getCard();
-   System.out.println(card.getValue() + " " + card.getSuit());    
-  }
+
 
 
 
