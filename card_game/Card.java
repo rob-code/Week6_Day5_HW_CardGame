@@ -19,7 +19,7 @@ public class Card{
   }
 
   public int getNumberValue(){
-    return this.value.getValue();
+    return this.value.getValue1();
   }
 
 

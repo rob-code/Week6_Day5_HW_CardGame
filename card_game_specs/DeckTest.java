@@ -18,19 +18,17 @@ public class DeckTest{
   }
 
   @Test
-  public void getTopCardFromDeck(){
-   Card card = deck.getCard();
-   System.out.println(card.getNumberValue());
-   System.out.println(card.getValue() + " " + card.getSuit());    
-  }
-
-  @Test
   public void canShuffleTheDeck(){
     deck.shuffle();
   }
 
-
-
+  @Test
+  public void getTopCardFromDeck(){
+    deck.shuffle();
+   Card card = deck.getCard();
+   System.out.println(card.getNumberValue());
+   System.out.println(card.getValue() + " " + card.getSuit());    
+  }
 
 
 
