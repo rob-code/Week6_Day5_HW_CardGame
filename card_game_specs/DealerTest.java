@@ -20,12 +20,6 @@ public class DealerTest{
     dealer = new Dealer(players);
   }
 
-
-@Test
-public void canStartGame(){
-  dealer.startGame();
-}
-
 @Test
 public void canGetNumberOfPlayers(){
 assertEquals(2, dealer.numberOfPlayers());
@@ -35,6 +29,12 @@ assertEquals(2, dealer.numberOfPlayers());
 public void canGetNumberOfCardsInDeck(){
   assertEquals(52, dealer.numberOfCardsInDeck());
 }
+
+@Test
+public void canShuffleDeck(){
+  dealer.shuffleDeck();
+}
+
 
 
 
