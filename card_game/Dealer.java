@@ -25,11 +25,9 @@ public class Dealer{
   }
 
   public void deal(){
-
    for (int i=0; i < this.players.size(); i++){
       Player p = (Player) players.get(i);
       p.addCardToHand(this.deck.getCard());
-   //   System.out.println("player " + (i+1) + " is " + p.getName());
    }
 
  }

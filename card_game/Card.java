@@ -18,7 +18,7 @@ public class Card{
     return this.suit;
   }
 
-  public int getNumberValue(){
+  public Integer getNumberValue(){
     return this.value.getValue1();
   }
 

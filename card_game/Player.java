@@ -27,7 +27,7 @@ public class Player{
     return hand.size();
   }
 
-  public ArrayList getCardsInHand() {
+  public ArrayList<Card> getCardsInHand() {
     return hand;
   }
 

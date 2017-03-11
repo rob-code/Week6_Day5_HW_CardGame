@@ -5,13 +5,16 @@ import java.util.*;
 
 public class DealerTest{
 
+  ArrayList<Card> hand;
   Player player1;
   Player player2;
   ArrayList<Player> players;
   Dealer dealer;
 
+
   @Before
   public void before(){
+    hand = new ArrayList<Card>();
     player1 = new Player("Jack");
     player2 = new Player("Jill");
     players = new ArrayList<Player>();
@@ -35,7 +38,23 @@ public void canShuffleDeck(){
   dealer.shuffleDeck();
 }
 
-
+@Test
+public void canDealHands(){
+  dealer.shuffleDeck();
+  dealer.deal();
+  hand = player1.getCardsInHand();
+  for (int i=0; i < hand.size(); i++){
+    Card c = (Card) hand.get(i);
+    String v = Integer.toString(c.getNumberValue());
+System.out.println(v + " of " + c.getSuit());
+  }
+    hand = player2.getCardsInHand();
+    for (int i=0; i < hand.size(); i++){
+      Card c = (Card) hand.get(i);
+      String v = Integer.toString(c.getNumberValue());
+  System.out.println(v + " of " + c.getSuit());
+    }
+}
 
 
 
