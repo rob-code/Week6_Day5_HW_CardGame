@@ -4,23 +4,26 @@ import java.util.*;
 
 public class Player{
 
-  private int numberOfCards;
   private String playerName;
-  private Card card;
   private ArrayList<Card>hand;
 
-  public Player(int numberOfCards, String playerName, Card card){
-    this.numberOfCards = numberOfCards;
+  private Card card;
+
+  public Player(String playerName){
     this.playerName = playerName;
-    this.card = card;
     this.hand = new ArrayList<Card>();
   }
 
+  public String getPlayerName(){
+    return this.playerName;
+  }
+
   public void addCardToHand(Card card){
+    this.card = card;
     this.hand.add(card); 
   }
 
-  public int getNumberOfCardsInHand(){
+  public int getNumberOfCards(){
     return hand.size();
   }
 
@@ -28,13 +31,7 @@ public class Player{
     return hand;
   }
 
-  public int getNumberOfCards(){
-    return this.numberOfCards;
-  }
-
-  public String getPlayerName(){
-    return this.playerName;
-  }
+ 
 
 
 
