@@ -14,7 +14,7 @@ public class Player{
     this.hand = new ArrayList<Card>();
   }
 
-  public String getPlayerName(){
+  public String getName(){
     return this.playerName;
   }
 

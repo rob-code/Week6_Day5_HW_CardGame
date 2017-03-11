@@ -29,10 +29,12 @@ public class Deck{
   public void shuffle(){
     long seed = System.nanoTime();
     Collections.shuffle(deck, new Random(seed));
-  for (int i=0; i < this.deck.size(); i++){
-    Card d = deck.get(i);
-    System.out.println("card " + (i+1) + " is " + d.getValue() + " of " + d.getSuit());
-  }
+ 
+  // ******* print out deck following shuffle
+  // for (int i=0; i < this.deck.size(); i++){
+  //   Card d = deck.get(i);
+  //   System.out.println("card " + (i+1) + " is " + d.getValue() + " of " + d.getSuit());
+  // }
   }
 
   public Card getCard(){

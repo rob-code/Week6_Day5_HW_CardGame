@@ -23,7 +23,7 @@ public class PlayerTest{
 
   @Test
   public void canGetNameOfPlayer(){
-    assertEquals("John", player.getPlayerName());
+    assertEquals("John", player.getName());
   }
 
   @Test
