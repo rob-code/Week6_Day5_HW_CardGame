@@ -36,6 +36,11 @@ public class Rules{
         winnersName = name;
         winnersCardDescription = "The winner is " + name + " with card : " + value + "/" + stringValue + " of " + suit;
       }
+      else if (value == winningCardValue) {
+        winnersCardDescription = "It's a draw!";
+        winnersName = "draw";
+      }
+
     }
   }
 

@@ -21,7 +21,7 @@ public class RulesTest{
     players.add(player2);
     dealer = new Dealer(players);
     rules = new Rules();
-  //dealer.shuffleDeck();
+    dealer.shuffleDeck();
     dealer.deal();
   }
 
