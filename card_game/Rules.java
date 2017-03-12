@@ -46,9 +46,6 @@ public class Rules{
   return winnersName;
 }
 
-
-
-
 public String judgeTwoRounds(ArrayList<Player> players){
   this.players = players;
 
@@ -67,8 +64,6 @@ public String judgeTwoRounds(ArrayList<Player> players){
     CardSuit suit = (CardSuit) (cards.get(j)).getSuit();
     System.out.println(name + " has : " + Integer.toString(value) + " of " + suit);
     handTotal += value;
-
-
   }
 
   if( handTotal > winningHandTotal){
@@ -80,6 +75,7 @@ public String judgeTwoRounds(ArrayList<Player> players){
     winningDescription = "It's a draw!";
     winnersName = "draw";
   }
+
 }
 
 System.out.println(winningDescription);

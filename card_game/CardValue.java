@@ -4,19 +4,19 @@ package card_game;
 
 public enum CardValue {
 
-  TWO(2, 112),
-  THREE(3, 113),
-  FOUR(4, 114),
-  FIVE(5, 115),
-  SIX(6, 116),
-  SEVEN(7, 117),
-  EIGHT(8, 118),
-  NINE(9, 119),
-  TEN(10, 1110),
-  JACK(11, 1111),
-  QUEEN(12, 1112),
-  KING(13, 1113),
-  ACE(14, 1114);
+  TWO(2, 2),
+  THREE(3, 3),
+  FOUR(4, 4),
+  FIVE(5, 5),
+  SIX(6, 6),
+  SEVEN(7, 7),
+  EIGHT(8, 8),
+  NINE(9, 9),
+  TEN(10, 10),
+  JACK(10, 10),
+  QUEEN(10, 10),
+  KING(10, 10),
+  ACE(11, 1);
 
   private int numberValue1;
   private int numberValue2;

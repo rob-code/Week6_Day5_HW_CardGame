@@ -21,17 +21,15 @@ public class CardTest{
     assertEquals(CardSuit.HEARTS, card.getSuit());
   }
 
-  // @Test
-  // public void canReadSetValue(){
-  //   card = new Card("Two", "Clubs");
-  //   assertEquals("Two", card.getValue());      
-  // }
+  @Test
+  public void canGetNumberValue(){
+    assertEquals(11, card.getNumberValue());      
+  }
 
-  // @Test
-  // public void canReadSetSuit(){
-  //   card = new Card("Two", "Clubs");
-  //   assertEquals("Clubs", card.getSuit());      
-  // }
+  @Test
+  public void canGetAlernateNumberValue(){
+    assertEquals(1, card.getAlternateNumberValue());      
+  }
 
 
 

@@ -18,9 +18,12 @@ public class Card{
     return this.suit;
   }
 
-  public Integer getNumberValue(){
+  public int getNumberValue(){
     return this.value.getValue1();
   }
-
+  
+  public int getAlternateNumberValue(){
+    return this.value.getValue2();
+  }
 
 }
