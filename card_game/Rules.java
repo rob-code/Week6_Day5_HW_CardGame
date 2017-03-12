@@ -40,15 +40,52 @@ public class Rules{
         winnersCardDescription = "It's a draw!";
         winnersName = "draw";
       }
+    }
+  }
+  System.out.println(winnersCardDescription);
+  return winnersName;
+}
 
+
+
+
+public String judgeTwoRounds(ArrayList<Player> players){
+  this.players = players;
+
+  int winningHandTotal = 0;
+  String winnersName = "";
+  String winningDescription = "";
+
+  for (int i=0; i < this.players.size(); i++){
+   Player p = (Player) players.get(i);
+   cards = p.getCardsInHand();
+   String name = p.getName();
+   int handTotal = 0;
+
+   for (int j=0; j < this.cards.size(); j++){
+    int value = (cards.get(j)).getNumberValue();
+    CardSuit suit = (CardSuit) (cards.get(j)).getSuit();
+    System.out.println(name + " has : " + Integer.toString(value) + " of " + suit);
+    handTotal += value;
+
+
+  }
+
+  
+
+    if( handTotal > winningHandTotal){
+      winningHandTotal = handTotal;
+      winnersName = name;
+      winningDescription = "The winner is " + winnersName + " with a total of : " + handTotal;
+    }
+    else if (handTotal == winningHandTotal) {
+      winningDescription = "It's a draw!";
+      winnersName = "draw";
     }
   }
 
-System.out.println(winnersCardDescription);
-
-return winnersName;
-
-
+  System.out.println(winningDescription);
+  return winnersName;
 }
 
 

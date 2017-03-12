@@ -32,11 +32,5 @@ public class Dealer{
       p.addCardToHand(this.deck.getCard());
    }
  }
- 
-// public Player judgeRound(ArrayList<Player> players){
-// this.rule.whoWon(ArrayList<Player> players);
-// }
-
-
 
 }

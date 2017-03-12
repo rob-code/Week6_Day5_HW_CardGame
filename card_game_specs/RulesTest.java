@@ -21,17 +21,24 @@ public class RulesTest{
     players.add(player2);
     dealer = new Dealer(players);
     rules = new Rules();
-    dealer.shuffleDeck();
-    dealer.deal();
   }
 
   @Test
   public void canGetWinnersnNameWhenDeckIsNotShuffled(){
-    assertEquals("Jack", rules.judgeRound(players));
+    dealer.shuffleDeck();
+    dealer.deal();
+    rules.judgeRound(players);
+    //assertEquals("Jack", rules.judgeRound(players));
   }
 
-
-
+  @Test
+  public void getWinnerAfterTwoRoundsAndNoShuffle(){
+    dealer.shuffleDeck();
+    dealer.deal();
+    dealer.deal();
+    rules.judgeTwoRounds(players);
+    //assertEquals("Jack", rules.judgeTwoRounds(players));
+  }
 
 
 
