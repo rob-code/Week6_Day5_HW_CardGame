@@ -43,14 +43,16 @@ public class DealerTest{
     hand = player1.getCardsInHand();
     for (int i=0; i < hand.size(); i++){
       Card c = (Card) hand.get(i);
-      String v = Integer.toString(c.getNumberValue());
-      System.out.println(v + " of " + c.getSuit());
+      assertEquals("ace", c.getValue());
+      assertEquals("Spades", c.getSuit());
+      assertEquals(11, c.getNumberValue());
     }
     hand = player2.getCardsInHand();
     for (int i=0; i < hand.size(); i++){
       Card c = (Card) hand.get(i);
-      String v = Integer.toString(c.getNumberValue());
-      System.out.println(v + " of " + c.getSuit());
+      assertEquals("king", c.getValue());
+      assertEquals("Spades", c.getSuit());
+      assertEquals(10, c.getNumberValue());
     }
   }
 
