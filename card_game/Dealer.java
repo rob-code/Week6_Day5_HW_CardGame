@@ -7,9 +7,15 @@ public class Dealer{
   private Deck deck;
   private ArrayList<Player>players;
 
+  private Player winner;
+  private Rule rule;
+
   public Dealer(ArrayList<Player> players){
     this.deck = new Deck();
     this.players = players;
+  
+    this.winner = new Player();
+    this.rule = new Rule();
   }
 
   public int numberOfPlayers(){
