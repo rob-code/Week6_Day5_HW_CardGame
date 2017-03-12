@@ -10,12 +10,12 @@ public class Card{
     this.suit = suit;
   }
 
-  public CardValue getValue(){
-    return this.value;
+  public String getValue(){
+    return this.value.toString();
   }
 
-  public CardSuit getSuit(){
-    return this.suit;
+  public String getSuit(){
+    return this.suit.toString();
   }
 
   public int getNumberValue(){

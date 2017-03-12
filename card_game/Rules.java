@@ -26,8 +26,8 @@ public class Rules{
      for (int j=0; j < this.cards.size(); j++){
       String name = p.getName();
       int value = (cards.get(j)).getNumberValue();
-      CardValue stringValue = (CardValue) (cards.get(j)).getValue();
-      CardSuit suit = (CardSuit) (cards.get(j)).getSuit();
+      String stringValue = cards.get(j).getValue();
+      String suit = cards.get(j).getSuit();
       
       System.out.println(name + " has card : " + value + "/" + stringValue + " of " + suit);
       
@@ -61,7 +61,7 @@ public String judgeTwoRounds(ArrayList<Player> players){
 
    for (int j=0; j < this.cards.size(); j++){
     int value = (cards.get(j)).getNumberValue();
-    CardSuit suit = (CardSuit) (cards.get(j)).getSuit();
+    String suit = cards.get(j).getSuit();
     System.out.println(name + " has : " + Integer.toString(value) + " of " + suit);
     handTotal += value;
   }

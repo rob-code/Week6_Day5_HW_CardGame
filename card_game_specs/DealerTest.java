@@ -39,7 +39,6 @@ public class DealerTest{
 
   @Test
   public void canDealHands(){
-    dealer.shuffleDeck();
     dealer.deal();
     hand = player1.getCardsInHand();
     for (int i=0; i < hand.size(); i++){

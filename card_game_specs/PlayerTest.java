@@ -35,7 +35,8 @@ public class PlayerTest{
 
     for (int i=0; i < hand.size(); i++){
      Card c = (Card) hand.get(i);
-     System.out.println(c.getValue() + " " + c.getSuit());
+     assertEquals("three", c.getValue());
+     assertEquals("Hearts", c.getSuit());
    }
  }
 

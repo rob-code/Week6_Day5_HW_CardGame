@@ -13,12 +13,12 @@ public class CardTest{
 
   @Test
   public void canGetValue(){
-    assertEquals(CardValue.ACE, card.getValue());
+    assertEquals("ace", card.getValue());
   }
 
   @Test
   public void canGetSuit(){
-    assertEquals(CardSuit.HEARTS, card.getSuit());
+    assertEquals("Hearts", card.getSuit());
   }
 
   @Test
