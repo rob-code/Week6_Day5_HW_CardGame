@@ -1,7 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.*;
-import card_game.*;
 import java.util.*;
+import card_game.*;
 
 public class DealerTest{
 
@@ -10,7 +10,6 @@ public class DealerTest{
   Player player2;
   ArrayList<Player> players;
   Dealer dealer;
-
 
   @Before
   public void before(){
@@ -23,38 +22,38 @@ public class DealerTest{
     dealer = new Dealer(players);
   }
 
-@Test
-public void canGetNumberOfPlayers(){
-assertEquals(2, dealer.numberOfPlayers());
-}
-
-@Test 
-public void canGetNumberOfCardsInDeck(){
-  assertEquals(52, dealer.numberOfCardsInDeck());
-}
-
-@Test
-public void canShuffleDeck(){
-  dealer.shuffleDeck();
-}
-
-@Test
-public void canDealHands(){
-  dealer.shuffleDeck();
-  dealer.deal();
-  hand = player1.getCardsInHand();
-  for (int i=0; i < hand.size(); i++){
-    Card c = (Card) hand.get(i);
-    String v = Integer.toString(c.getNumberValue());
-System.out.println(v + " of " + c.getSuit());
+  @Test
+  public void canGetNumberOfPlayers(){
+    assertEquals(2, dealer.numberOfPlayers());
   }
+
+  @Test 
+  public void canGetNumberOfCardsInDeck(){
+    assertEquals(52, dealer.numberOfCardsInDeck());
+  }
+
+  @Test
+  public void canShuffleDeck(){
+    dealer.shuffleDeck();
+  }
+
+  @Test
+  public void canDealHands(){
+    dealer.shuffleDeck();
+    dealer.deal();
+    hand = player1.getCardsInHand();
+    for (int i=0; i < hand.size(); i++){
+      Card c = (Card) hand.get(i);
+      String v = Integer.toString(c.getNumberValue());
+      System.out.println(v + " of " + c.getSuit());
+    }
     hand = player2.getCardsInHand();
     for (int i=0; i < hand.size(); i++){
       Card c = (Card) hand.get(i);
       String v = Integer.toString(c.getNumberValue());
-  System.out.println(v + " of " + c.getSuit());
+      System.out.println(v + " of " + c.getSuit());
     }
-}
+  }
 
 
 

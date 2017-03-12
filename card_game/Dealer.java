@@ -2,20 +2,16 @@ package card_game;
 
 import java.util.*;
 
+// the dealer deals the cards and judges the game
+
 public class Dealer{
 
   private Deck deck;
   private ArrayList<Player>players;
 
-  private Player winner;
-  private Rule rule;
-
   public Dealer(ArrayList<Player> players){
     this.deck = new Deck();
     this.players = players;
-  
-    this.winner = new Player();
-    this.rule = new Rule();
   }
 
   public int numberOfPlayers(){
@@ -35,10 +31,11 @@ public class Dealer{
       Player p = (Player) players.get(i);
       p.addCardToHand(this.deck.getCard());
    }
-
  }
  
-
+// public Player judgeRound(ArrayList<Player> players){
+// this.rule.whoWon(ArrayList<Player> players);
+// }
 
 
 

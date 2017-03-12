@@ -37,9 +37,6 @@ public class PlayerTest{
      Card c = (Card) hand.get(i);
      System.out.println(c.getValue() + " " + c.getSuit());
    }
-
-
-
  }
 
 
