@@ -71,21 +71,19 @@ public String judgeTwoRounds(ArrayList<Player> players){
 
   }
 
-  
-
-    if( handTotal > winningHandTotal){
-      winningHandTotal = handTotal;
-      winnersName = name;
-      winningDescription = "The winner is " + winnersName + " with a total of : " + handTotal;
-    }
-    else if (handTotal == winningHandTotal) {
-      winningDescription = "It's a draw!";
-      winnersName = "draw";
-    }
+  if( handTotal > winningHandTotal){
+    winningHandTotal = handTotal;
+    winnersName = name;
+    winningDescription = "The winner is " + winnersName + " with a total of : " + handTotal;
   }
+  else if (handTotal == winningHandTotal) {
+    winningDescription = "It's a draw!";
+    winnersName = "draw";
+  }
+}
 
-  System.out.println(winningDescription);
-  return winnersName;
+System.out.println(winningDescription);
+return winnersName;
 }
 
 
