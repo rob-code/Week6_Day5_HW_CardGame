@@ -8,6 +8,7 @@ public class Dealer{
 
   private Deck deck;
   private ArrayList<Player>players;
+  private Player player;
 
   public Dealer(ArrayList<Player> players){
     this.deck = new Deck();
@@ -28,9 +29,36 @@ public class Dealer{
 
   public void deal(){
    for (int i=0; i < this.players.size(); i++){
-      Player p = (Player) players.get(i);
-      p.addCardToHand(this.deck.getCard());
-   }
- }
+    Player p = (Player) players.get(i);
+    p.addCardToHand(this.deck.getCard());
+  }
+}
+
+public void dealSingleCard(Player player){
+  this.player = player;
+  player.addCardToHand(this.deck.getCard());
+}
+
+public String checkPlayerResult(Player player){
+this.player = player;
+int score = this.player.getCurrentScore();
+String result;
+
+if (score == 21){
+  return result = "Pontoon!";
+}
+else if (score > 21)
+{
+  return result = "Bust!";
+}
+else
+{
+  return result = "Play again?";
+}
+
+
+
+
+}
 
 }

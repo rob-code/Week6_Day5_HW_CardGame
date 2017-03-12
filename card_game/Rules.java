@@ -17,7 +17,7 @@ public class Rules{
 
     int winningCardValue = 0;
     String winnersName = "";
-    String winnersCardDescription = "";
+    //String winnersCardDescription = "";
 
     for (int i=0; i < this.players.size(); i++){
      Player p = (Player) players.get(i);
@@ -26,23 +26,23 @@ public class Rules{
      for (int j=0; j < this.cards.size(); j++){
       String name = p.getName();
       int value = (cards.get(j)).getNumberValue();
-      String stringValue = cards.get(j).getValue();
-      String suit = cards.get(j).getSuit();
+      //String stringValue = cards.get(j).getValue();
+      //String suit = cards.get(j).getSuit();
       
-      System.out.println(name + " has card : " + value + "/" + stringValue + " of " + suit);
+      //System.out.println(name + " has card : " + value + "/" + stringValue + " of " + suit);
       
       if( value > winningCardValue ){
         winningCardValue = value;
         winnersName = name;
-        winnersCardDescription = "The winner is " + name + " with card : " + value + "/" + stringValue + " of " + suit;
+        //winnersCardDescription = "The winner is " + name + " with card : " + value + "/" + stringValue + " of " + suit;
       }
       else if (value == winningCardValue) {
-        winnersCardDescription = "It's a draw!";
+        //winnersCardDescription = "It's a draw!";
         winnersName = "draw";
       }
     }
   }
-  System.out.println(winnersCardDescription);
+  //System.out.println(winnersCardDescription);
   return winnersName;
 }
 
@@ -51,7 +51,7 @@ public String judgeTwoRounds(ArrayList<Player> players){
 
   int winningHandTotal = 0;
   String winnersName = "";
-  String winningDescription = "";
+  //String winningDescription = "";
 
   for (int i=0; i < this.players.size(); i++){
    Player p = (Player) players.get(i);
@@ -61,24 +61,24 @@ public String judgeTwoRounds(ArrayList<Player> players){
 
    for (int j=0; j < this.cards.size(); j++){
     int value = (cards.get(j)).getNumberValue();
-    String suit = cards.get(j).getSuit();
-    System.out.println(name + " has : " + Integer.toString(value) + " of " + suit);
+    //String suit = cards.get(j).getSuit();
+    //System.out.println(name + " has : " + Integer.toString(value) + " of " + suit);
     handTotal += value;
   }
 
   if( handTotal > winningHandTotal){
     winningHandTotal = handTotal;
     winnersName = name;
-    winningDescription = "The winner is " + winnersName + " with a total of : " + handTotal;
+    //winningDescription = "The winner is " + winnersName + " with a total of : " + handTotal;
   }
   else if (handTotal == winningHandTotal) {
-    winningDescription = "It's a draw!";
+    //winningDescription = "It's a draw!";
     winnersName = "draw";
   }
 
 }
 
-System.out.println(winningDescription);
+//System.out.println(winningDescription);
 return winnersName;
 }
 

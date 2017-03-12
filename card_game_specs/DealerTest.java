@@ -38,7 +38,7 @@ public class DealerTest{
   }
 
   @Test
-  public void canDealHands(){
+  public void canDealHand(){
     dealer.deal();
     hand = player1.getCardsInHand();
     for (int i=0; i < hand.size(); i++){
@@ -55,6 +55,30 @@ public class DealerTest{
       assertEquals(10, c.getNumberValue());
     }
   }
+
+  @Test
+  public void canDealSingleCardToPlayer(){
+    dealer.dealSingleCard(player1);
+    hand = player1.getCardsInHand();
+    for (int i=0; i < hand.size(); i++){
+      Card c = (Card) hand.get(i);
+      assertEquals("ace", c.getValue());
+      assertEquals("Spades", c.getSuit());
+      assertEquals(11, c.getNumberValue());
+    }
+  }
+
+  @Test
+  public void canCheckPontoonResult(){
+    dealer.shuffleDeck();
+    dealer.deal();
+    dealer.deal();
+    dealer.dealSingleCard(player1);
+    String result = dealer.checkPlayerResult(player1);
+    System.out.println(result);
+    
+  }
+
 
 
 

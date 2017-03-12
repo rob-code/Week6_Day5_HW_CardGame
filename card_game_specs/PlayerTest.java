@@ -40,6 +40,20 @@ public class PlayerTest{
    }
  }
 
+ @Test
+ public void canGetCurrentScore(){
+  card = new Card(CardValue.NINE, CardSuit.HEARTS);
+  player.addCardToHand(card);
+  card = new Card(CardValue.SIX, CardSuit.CLUBS);
+  player.addCardToHand(card);
+  // card = new Card(CardValue.SEVEN, CardSuit.CLUBS);
+  // player.addCardToHand(card);
+  card = new Card(CardValue.ACE, CardSuit.CLUBS);
+  player.addCardToHand(card);
+  assertEquals(16, player.getCurrentScore());
+}
+
+
 
 
 

@@ -31,7 +31,20 @@ public class Player{
     return hand;
   }
 
- 
+  public int getCurrentScore(){
+    int score = 0;
+    for (int i=0; i < this.hand.size(); i++){
+
+      score += hand.get(i).getNumberValue();
+
+      if (score > 21 && hand.get(i).getValue() == "ace"){
+        score -= hand.get(i).getNumberValue();
+        score += hand.get(i).getAlternateNumberValue();
+      }
+    }
+    return score;
+  }
+
 
 
 
